@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Setting up Railway Hosting">
+    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="find User By Id">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/Javalinconfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/Javalinconfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/UserDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/UserDAO.kt" afterDir="false" />
@@ -40,22 +41,76 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/madha/Downloads/kotlin-client-client-generated (1)&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/madha/Downloads/healthtrackerrest-2.0",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Kotlin Projects\HealthtrackerRest\healthtrackerrest\src\test\kotlin\ie.setu\helpers" />
+      <recent name="D:\Kotlin Projects\HealthtrackerRest\healthtrackerrest\src\test\kotlin\ie.setu\repository" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.AppKt">
+    <configuration name="UserDAOTest$ReadUsers.get user by email that doesn't exist, results in no user returned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="healthtrackerrest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.repository.UserDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.UserDAOTest$ReadUsers" />
+      <option name="METHOD_NAME" value="get user by email that doesn't exist, results in no user returned" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDAOTest$ReadUsers.getting all users from a populated table returns all rows" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="healthtrackerrest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.repository.UserDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.UserDAOTest$ReadUsers" />
+      <option name="METHOD_NAME" value="getting all users from a populated table returns all rows" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="healthtrackerrest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.repository" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.UserDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ie.setu.AppKt" />
       <module name="healthtrackerrest" />
@@ -66,6 +121,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.AppKt" />
+        <item itemvalue="JUnit.UserDAOTest$ReadUsers.getting all users from a populated table returns all rows" />
+        <item itemvalue="JUnit.UserDAOTest" />
+        <item itemvalue="JUnit.UserDAOTest$ReadUsers.get user by email that doesn't exist, results in no user returned" />
       </list>
     </recent_temporary>
   </component>
@@ -83,7 +141,9 @@
       <workItem from="1698503835834" duration="5288000" />
       <workItem from="1698527924059" duration="3128000" />
       <workItem from="1698602768739" duration="6121000" />
-      <workItem from="1699024822659" duration="7292000" />
+      <workItem from="1699024822659" duration="14723000" />
+      <workItem from="1699045995294" duration="432000" />
+      <workItem from="1699046531885" duration="5130000" />
     </task>
     <task id="LOCAL-00001" summary="After Connect to ElephantSQL">
       <option name="closed" value="true" />
@@ -109,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698530567594</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="find User By Id">
+      <option name="closed" value="true" />
+      <created>1699036693632</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699036693632</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +198,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="After Connect to ElephantSQL" />
     <MESSAGE value="Setting up Railway Hosting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setting up Railway Hosting" />
+    <MESSAGE value="find User By Id" />
+    <option name="LAST_COMMIT_MESSAGE" value="find User By Id" />
   </component>
 </project>

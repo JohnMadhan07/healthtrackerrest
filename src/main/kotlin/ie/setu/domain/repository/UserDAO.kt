@@ -7,25 +7,34 @@ import org.jetbrains.exposed.sql.transactions.transaction
 import org.jetbrains.exposed.sql.select
 
 class UserDAO {
-    fun getAll() : ArrayList<User> {
+    fun getAll(): ArrayList<User> {
         val userList: ArrayList<User> = arrayListOf()
         transaction {
             Users.selectAll().map {
-                userList.add(mapToUser(it))
-            }
-
+                userList.add(mapToUser(it)) }
         }
         return userList
     }
 
     fun findById(id: Int): User?{
-            return transaction {
-                Users.select() {
-                    Users.id eq id}
-                    .map{mapToUser(it)}
-                    .firstOrNull()
-            }
+        return transaction {
+            Users.select() {
+                Users.id eq id}
+                .map{mapToUser(it)}
+                .firstOrNull()
         }
     }
+
     fun save(user: User){
-  }
+    }
+
+    fun findByEmail(email: String) :User?{
+        return null
+    }
+
+    fun delete(id: Int) {
+    }
+
+    fun update(id: Int, user: User){
+    }
+}

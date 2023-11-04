@@ -3,7 +3,9 @@ package ie.setu.domain.repository
 import ie.setu.domain.Activity
 import ie.setu.domain.db.Activities
 import ie.setu.utils.mapToActivity
-import org.jetbrains.exposed.sql.*
+import org.jetbrains.exposed.sql.insert
+import org.jetbrains.exposed.sql.select
+import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
 
 class ActivityDAO {

@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Version 2">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/DBConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/Activity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/Activities.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ActivityDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/utils/DBUtilities.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/UserDAOTest.kt" afterDir="false" />
+    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="UserDAOTested">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/DbConfig.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/Javalinconfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/Users.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/Users.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/UserDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/UserDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/utils/DBUtilities.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ActivityDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ActivityDAO.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,9 +140,14 @@
           <option name="PATTERN" value="ie.setu.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+        <pattern>
+          <option name="PATTERN" value="ie.setu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ie.setu.repository" />
       <option name="MAIN_CLASS_NAME" value="ie.setu.repository.UserDAOTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -196,7 +188,7 @@
       <workItem from="1699045995294" duration="432000" />
       <workItem from="1699046531885" duration="8070000" />
       <workItem from="1699092301117" duration="305000" />
-      <workItem from="1699092625040" duration="5896000" />
+      <workItem from="1699092625040" duration="7977000" />
     </task>
     <task id="LOCAL-00001" summary="After Connect to ElephantSQL">
       <option name="closed" value="true" />
@@ -238,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699052553350</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="UserDAOTested">
+      <option name="closed" value="true" />
+      <created>1699098583102</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699098583102</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,22 +261,13 @@
     <MESSAGE value="Setting up Railway Hosting" />
     <MESSAGE value="find User By Id" />
     <MESSAGE value="Version 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 2" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/UserDAOTest.kt</url>
-          <line>47</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="UserDAOTested" />
+    <option name="LAST_COMMIT_MESSAGE" value="UserDAOTested" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/healthtrackerrest$UserDAOTest.ic" NAME="UserDAOTest Coverage Results" MODIFIED="1699055085354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/healthtrackerrest$UserDAOTest.ic" NAME="UserDAOTest Coverage Results" MODIFIED="1699099770085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ie.setu.repository.*</FILTER>
+      <FILTER>ie.setu.*</FILTER>
     </SUITE>
   </component>
 </project>

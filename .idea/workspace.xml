@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="UserDAOTested">
+    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="UserDAO Tested">
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/ActivityDAOTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ActivityDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ActivityDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +55,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Kotlin Projects/HealthtrackerRest/healthtrackerrest/src/main/kotlin/ie/setu/utils",
+    "last_opened_file_path": "D:/Kotlin Projects/HealthtrackerRest/healthtrackerrest/src/test/kotlin/ie/setu/helpers",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -61,11 +65,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Kotlin Projects\HealthtrackerRest\healthtrackerrest\src\test\kotlin\ie\setu\helpers" />
       <recent name="D:\Kotlin Projects\HealthtrackerRest\healthtrackerrest\src\main\kotlin\ie\setu\utils" />
       <recent name="D:\Kotlin Projects\HealthtrackerRest\healthtrackerrest\src\main\kotlin\ie\setu\domain\utils" />
       <recent name="D:\Kotlin Projects\HealthtrackerRest\healthtrackerrest\src\main\kotlin\ie\setu\config" />
       <recent name="D:\Kotlin Projects\HealthtrackerRest\healthtrackerrest\src\main" />
-      <recent name="D:\Kotlin Projects\HealthtrackerRest\healthtrackerrest\src\test\kotlin\ie.setu\helpers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Kotlin Projects\HealthtrackerRest\healthtrackerrest\src" />
@@ -77,14 +81,34 @@
       <recent name="ie.setu.domain" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="ie.setu.domain.repository" />
+      <recent name="ie.setu.repository" />
       <recent name="ie.setu.controllers" />
-      <recent name="ie.setu.domain" />
-      <recent name="ie.setu.domain.db" />
       <recent name="ie.setu.config" />
+      <recent name="ie.setu.domain.repository" />
+      <recent name="ie.setu.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserDAOTest">
+  <component name="RunManager" selected="JUnit.ActivityDAOTest">
+    <configuration name="ActivityDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="healthtrackerrest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="ie.setu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.repository" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.ActivityDAOTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserDAOTest$CreateUsers.multiple users added to table can be retrieved successfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="healthtrackerrest" />
       <extension name="coverage">
@@ -96,22 +120,6 @@
       <option name="PACKAGE_NAME" value="ie.setu.repository.UserDAOTest" />
       <option name="MAIN_CLASS_NAME" value="ie.setu.repository.UserDAOTest$CreateUsers" />
       <option name="METHOD_NAME" value="multiple users added to table can be retrieved successfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserDAOTest$ReadUsers.get user by email that doesn't exist, results in no user returned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="healthtrackerrest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ie.setu.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.UserDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.UserDAOTest$ReadUsers" />
-      <option name="METHOD_NAME" value="get user by email that doesn't exist, results in no user returned" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ActivityDAOTest" />
+        <item itemvalue="Kotlin.AppKt" />
         <item itemvalue="JUnit.UserDAOTest" />
         <item itemvalue="JUnit.UserDAOTest$CreateUsers.multiple users added to table can be retrieved successfully" />
-        <item itemvalue="Kotlin.AppKt" />
         <item itemvalue="JUnit.UserDAOTest$ReadUsers.getting all users from a populated table returns all rows" />
-        <item itemvalue="JUnit.UserDAOTest$ReadUsers.get user by email that doesn't exist, results in no user returned" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +196,7 @@
       <workItem from="1699045995294" duration="432000" />
       <workItem from="1699046531885" duration="8070000" />
       <workItem from="1699092301117" duration="305000" />
-      <workItem from="1699092625040" duration="7977000" />
+      <workItem from="1699092625040" duration="12969000" />
     </task>
     <task id="LOCAL-00001" summary="After Connect to ElephantSQL">
       <option name="closed" value="true" />
@@ -238,7 +246,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699098583102</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Deployed in Railway">
+      <option name="closed" value="true" />
+      <created>1699100651794</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699100651794</updated>
+    </task>
+    <task id="LOCAL-00008" summary="UserDAO Tested">
+      <option name="closed" value="true" />
+      <created>1699100710410</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699100710410</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +286,9 @@
     <MESSAGE value="find User By Id" />
     <MESSAGE value="Version 2" />
     <MESSAGE value="UserDAOTested" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserDAOTested" />
+    <MESSAGE value="Deployed in Railway" />
+    <MESSAGE value="UserDAO Tested" />
+    <option name="LAST_COMMIT_MESSAGE" value="UserDAO Tested" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/healthtrackerrest$UserDAOTest.ic" NAME="UserDAOTest Coverage Results" MODIFIED="1699099770085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

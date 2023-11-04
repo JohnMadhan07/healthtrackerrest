@@ -52,6 +52,10 @@ class JavalinConfig {
                     patch(HealthTrackerController::updateActivity)
                 }
             }
+            path("/api/diets"){
+                get(HealthTrackerController::getAllDiet)
+                post(HealthTrackerController::addDiet)
+            }
         }
     }
 

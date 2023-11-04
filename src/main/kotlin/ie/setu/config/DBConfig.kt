@@ -1,6 +1,6 @@
 package ie.setu.config
 import org.jetbrains.exposed.sql.Database
-import org.jetbrains.exposed.sql.name
+
 class DbConfig{
     fun getDbConnection() :Database{
 
@@ -19,7 +19,7 @@ class DbConfig{
             user = PGUSER,
             password = PGPASSWORD
         )
-        //logger.info{"DbConfig name = " + dbConfig.name}
+        //ogger.info{"DbConfig name = " + dbConfig.name}
         //logger.info{"DbConfig url = " + dbConfig.url}
         return dbConfig
     }

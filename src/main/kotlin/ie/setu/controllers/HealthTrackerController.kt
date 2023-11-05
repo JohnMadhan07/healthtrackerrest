@@ -5,8 +5,10 @@ import com.fasterxml.jackson.datatype.joda.JodaModule
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import ie.setu.domain.Activity
+import ie.setu.domain.Diet
 import ie.setu.domain.User
 import ie.setu.domain.repository.ActivityDAO
+import ie.setu.domain.repository.DietDAO
 import ie.setu.domain.repository.UserDAO
 import io.javalin.http.Context
 
@@ -14,6 +16,7 @@ object HealthTrackerController {
 
     private val userDao = UserDAO()
     private val activityDAO = ActivityDAO()
+    private val dietDAO = DietDAO()
 
     fun getAllUsers(ctx: Context) {
         ctx.json(userDao.getAll())
@@ -114,6 +117,19 @@ object HealthTrackerController {
         activityDAO.updateByActivityId(
             activityId = ctx.pathParam("activity-id").toInt(),
             activityDTO=activity)
+    }
+
+//--------------------------------------------------------------
+// DietDAOI specifics
+//-------------------------------------------------------------
+    fun getAllDiet(ctx: Context) {
+        ctx.json(dietDAO.getAll())
+    }
+    fun addDiet(ctx: Context) {
+        val mapper = jacksonObjectMapper()
+        val diet = mapper.readValue<Diet>(ctx.body())
+        dietDAO.save(diet)
+        ctx.json(diet)
     }
 
 }

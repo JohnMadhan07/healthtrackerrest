@@ -1,15 +1,14 @@
 package ie.setu.domain.db
+
 import org.jetbrains.exposed.sql.ReferenceOption
 import org.jetbrains.exposed.sql.Table
 
-// SRP - Responsibility is to manage one activity.
+// SRP - Responsibility is to manage one user.
 //       Database wise, this is the table object.
 
-object Activities : Table("activities") {
+object Diets : Table("diets") {
     val id = integer("id").autoIncrement().primaryKey()
-    val description = varchar("description", 100)
-    val duration = double("duration")
+    val food = varchar("food", 100)
     val calories = integer("calories")
-    val started = datetime("started")
     val userId = integer("user_id").references(Users.id, onDelete = ReferenceOption.CASCADE)
 }

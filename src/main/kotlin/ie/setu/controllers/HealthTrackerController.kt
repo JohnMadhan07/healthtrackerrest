@@ -97,7 +97,7 @@ object HealthTrackerController {
 
     fun getActivitiesByActivityId(ctx: Context) {
         val activity = activityDAO.findByActivityId((ctx.pathParam("activity-id").toInt()))
-        if (activity != null){
+        if (activity != null) {
             val mapper = jacksonObjectMapper()
                 .registerModule(JodaModule())
                 .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
@@ -105,30 +105,32 @@ object HealthTrackerController {
         }
     }
 
-    fun deleteActivityByActivityId(ctx: Context){
+    fun deleteActivityByActivityId(ctx: Context) {
         activityDAO.deleteByActivityId(ctx.pathParam("activity-id").toInt())
     }
 
-    fun deleteActivityByUserId(ctx: Context){
+    fun deleteActivityByUserId(ctx: Context) {
         activityDAO.deleteByUserId(ctx.pathParam("user-id").toInt())
     }
 
-    fun updateActivity(ctx: Context){
+    fun updateActivity(ctx: Context) {
         val mapper = jacksonObjectMapper()
             .registerModule(JodaModule())
             .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
         val activity = mapper.readValue<Activity>(ctx.body())
         activityDAO.updateByActivityId(
             activityId = ctx.pathParam("activity-id").toInt(),
-            activityDTO=activity)
+            activityDTO = activity
+        )
     }
 
-//--------------------------------------------------------------
+    //--------------------------------------------------------------
 // DietDAOI specifics
 //-------------------------------------------------------------
     fun getAllDiet(ctx: Context) {
         ctx.json(dietDAO.getAll())
     }
+
     fun getDietsByUserId(ctx: Context) {
         if (userDao.findById(ctx.pathParam("user-id").toInt()) != null) {
             val diets = dietDAO.findByUserId(ctx.pathParam("user-id").toInt())
@@ -137,37 +139,45 @@ object HealthTrackerController {
             }
         }
     }
+
     fun addDiet(ctx: Context) {
         val mapper = jacksonObjectMapper()
         val diet = mapper.readValue<Diet>(ctx.body())
         dietDAO.save(diet)
         ctx.json(diet)
     }
+
     fun getDietsByDietId(ctx: Context) {
         val diet = dietDAO.findByDietId((ctx.pathParam("diet-id").toInt()))
-        if (diet != null){
+        if (diet != null) {
             ctx.json((diet))
         }
     }
-    fun updateDiet(ctx: Context){
+
+    fun updateDiet(ctx: Context) {
         val mapper = jacksonObjectMapper()
         val diet = mapper.readValue<Diet>(ctx.body())
         dietDAO.updateByDietId(
             dietId = ctx.pathParam("diet-id").toInt(),
-            dietDTO= diet)
+            dietDTO = diet
+        )
     }
-    fun deleteDietByDietId(ctx: Context){
+
+    fun deleteDietByDietId(ctx: Context) {
         dietDAO.deleteByDietId(ctx.pathParam("diet-id").toInt())
-    }   fun deleteDietByUserId(ctx: Context){
+    }
+
+    fun deleteDietByUserId(ctx: Context) {
         dietDAO.deleteByUserId(ctx.pathParam("user-id").toInt())
     }
 
-//--------------------------------------------------------------
+    //--------------------------------------------------------------
 // SupplementDAOI specifics
 //-------------------------------------------------------------
     fun getAllSupplement(ctx: Context) {
         ctx.json(supplementDAO.getAll())
     }
+
     fun getSupplementsByUserId(ctx: Context) {
         if (userDao.findById(ctx.pathParam("user-id").toInt()) != null) {
             val supplements = supplementDAO.findByUserId(ctx.pathParam("user-id").toInt())
@@ -176,16 +186,34 @@ object HealthTrackerController {
             }
         }
     }
+
     fun findSupplementsBySupplementId(ctx: Context) {
         val supplement = supplementDAO.findBySupplementId((ctx.pathParam("supplement-id").toInt()))
-        if (supplement != null){
+        if (supplement != null) {
             ctx.json((supplement))
         }
     }
+
     fun addSupplement(ctx: Context) {
         val mapper = jacksonObjectMapper()
         val supplement = mapper.readValue<Supplement>(ctx.body())
         supplementDAO.save(supplement)
         ctx.json(supplement)
     }
+    fun updateSupplement(ctx: Context) {
+        val mapper = jacksonObjectMapper()
+        val supplement = mapper.readValue<Supplement>(ctx.body())
+        supplementDAO.updateBySupplementId(
+            supplementId = ctx.pathParam("supplement-id").toInt(),
+            supplementDTO = supplement
+        )
+    }
+    fun deleteSupplementBySupplementId(ctx: Context) {
+        supplementDAO.deleteBySupplementId(ctx.pathParam("supplement-id").toInt())
+
+    }
+    fun deleteSupplementByUserId(ctx: Context) {
+        supplementDAO.deleteByUserId(ctx.pathParam("user-id").toInt())
+    }
+
 }

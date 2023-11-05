@@ -46,6 +46,7 @@ class JavalinConfig {
                     //The overall path is: "/api/users/:user-id/supplements"
                     path("supplements"){
                         get(HealthTrackerController::getSupplementsByUserId)
+                        delete(HealthTrackerController::deleteSupplementByUserId)
                     }
                 }
                 path("/email/{email}"){
@@ -75,7 +76,8 @@ class JavalinConfig {
                 post(HealthTrackerController::addSupplement)
                 path("{supplement-id}") {
                     get(HealthTrackerController::findSupplementsBySupplementId)
-
+                    delete(HealthTrackerController::deleteSupplementBySupplementId)
+                    patch(HealthTrackerController::updateSupplement)
                 }
             }
         }

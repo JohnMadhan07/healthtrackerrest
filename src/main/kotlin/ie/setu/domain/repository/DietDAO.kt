@@ -59,5 +59,4 @@ class DietDAO {
             Diets.deleteWhere { Diets.userId eq userId }
         }
     }
-
 }

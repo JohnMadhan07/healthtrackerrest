@@ -2,12 +2,15 @@ package ie.setu.helpers
 
 import ie.setu.domain.Activity
 import ie.setu.domain.Diet
+import ie.setu.domain.Supplement
 import ie.setu.domain.User
 import ie.setu.domain.db.Activities
 import ie.setu.domain.db.Diets
+import ie.setu.domain.db.Supplements
 import ie.setu.domain.db.Users
 import ie.setu.domain.repository.ActivityDAO
 import ie.setu.domain.repository.DietDAO
+import ie.setu.domain.repository.SupplementDAO
 import ie.setu.domain.repository.UserDAO
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.joda.time.DateTime
@@ -34,6 +37,11 @@ val diets = arrayListOf<Diet>(
     Diet(id = 2, food = "Mutton",  calories = 300,  userId = 1),
     Diet(id = 3, food = "Egg",  calories = 30,  userId = 2)
 )
+val supplements = arrayListOf<Supplement>(
+    Supplement(id = 1, name = "Creatine", about = "Increase in ATP",  userId = 1),
+    Supplement(id = 2, name = "MultiVitaminTab",  about = "Vitamins for Muscles",  userId = 1),
+    Supplement(id = 3, name = "AminoAcids",  about = "Repair muscle tears",  userId = 2)
+)
 
 fun populateUserTable(): UserDAO {
     SchemaUtils.create(Users)
@@ -59,4 +67,12 @@ fun populateDietTable(): DietDAO {
     dietDAO.save(diets.get(1))
     dietDAO.save(diets.get(2))
     return dietDAO
+}
+fun populateSupplementTable(): SupplementDAO {
+    SchemaUtils.create(Supplements)
+    val supplementDAO = SupplementDAO()
+    supplementDAO.save(supplements.get(0))
+    supplementDAO.save(supplements.get(1))
+    supplementDAO.save(supplements.get(2))
+    return supplementDAO
 }

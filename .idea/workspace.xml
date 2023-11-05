@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Diet features Tested">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/Supplement.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/db/Supplements.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/SupplementDAO.kt" afterDir="false" />
+    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Supplement Add and Get">
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/SupplementDAOTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/DietDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/DietDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/utils/DBUtilities.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/utils/DBUtilities.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/SupplementDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/SupplementDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/DietDAOTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/DietDAOTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,8 +126,8 @@
       <recent name="ie.setu.domain" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="DietDAOTest$DeleteDiets.deleting an existing diet (by id) in table results in record being deleted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SupplementDAOTest">
+    <configuration name="SupplementDAOTest$DeleteSupplements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="healthtrackerrest" />
       <extension name="coverage">
         <pattern>
@@ -135,15 +135,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.DietDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.DietDAOTest$DeleteDiets" />
-      <option name="METHOD_NAME" value="deleting an existing diet (by id) in table results in record being deleted()" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="ie.setu.repository.SupplementDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.SupplementDAOTest$DeleteSupplements" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DietDAOTest$DeleteDiets.deleting diets when 1 or more exist for user id results in deletion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SupplementDAOTest$ReadSupplements.get supplement by supplement id that exists, results in a correct supplement returned" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="healthtrackerrest" />
       <extension name="coverage">
         <pattern>
@@ -151,15 +150,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.DietDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.DietDAOTest$DeleteDiets" />
-      <option name="METHOD_NAME" value="deleting diets when 1 or more exist for user id results in deletion" />
+      <option name="PACKAGE_NAME" value="ie.setu.repository.SupplementDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.SupplementDAOTest$ReadSupplements" />
+      <option name="METHOD_NAME" value="get supplement by supplement id that exists, results in a correct supplement returned" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DietDAOTest$DeleteDiets.deleting diets when none exist for user id results in no deletion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SupplementDAOTest$UpdateSupplements.updating existing diet in table results in successful update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="healthtrackerrest" />
       <extension name="coverage">
         <pattern>
@@ -167,15 +166,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.DietDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.DietDAOTest$DeleteDiets" />
-      <option name="METHOD_NAME" value="deleting diets when none exist for user id results in no deletion" />
+      <option name="PACKAGE_NAME" value="ie.setu.repository.SupplementDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.SupplementDAOTest$UpdateSupplements" />
+      <option name="METHOD_NAME" value="updating existing diet in table results in successful update" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DietDAOTest$UpdateDiets.updating existing activity in table results in successful update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SupplementDAOTest$UpdateSupplements.updating existing supplement in table results in successful update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="healthtrackerrest" />
       <extension name="coverage">
         <pattern>
@@ -183,15 +182,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ie.setu.repository.DietDAOTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.DietDAOTest$UpdateDiets" />
-      <option name="METHOD_NAME" value="updating existing activity in table results in successful update" />
+      <option name="PACKAGE_NAME" value="ie.setu.repository.SupplementDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.SupplementDAOTest$UpdateSupplements" />
+      <option name="METHOD_NAME" value="updating existing supplement in table results in successful update" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DietDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SupplementDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="healthtrackerrest" />
       <extension name="coverage">
         <pattern>
@@ -204,7 +203,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ie.setu.repository" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.DietDAOTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.SupplementDAOTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
@@ -213,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DietDAOTest$UpdateDiets.updating existing activity in table results in successful update" />
-        <item itemvalue="JUnit.DietDAOTest$DeleteDiets.deleting diets when 1 or more exist for user id results in deletion" />
-        <item itemvalue="JUnit.DietDAOTest$DeleteDiets.deleting diets when none exist for user id results in no deletion" />
-        <item itemvalue="JUnit.DietDAOTest$DeleteDiets.deleting an existing diet (by id) in table results in record being deleted" />
-        <item itemvalue="JUnit.DietDAOTest" />
+        <item itemvalue="JUnit.SupplementDAOTest" />
+        <item itemvalue="JUnit.SupplementDAOTest$DeleteSupplements" />
+        <item itemvalue="JUnit.SupplementDAOTest$UpdateSupplements.updating existing supplement in table results in successful update" />
+        <item itemvalue="JUnit.SupplementDAOTest$UpdateSupplements.updating existing diet in table results in successful update" />
+        <item itemvalue="JUnit.SupplementDAOTest$ReadSupplements.get supplement by supplement id that exists, results in a correct supplement returned" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +240,7 @@
       <workItem from="1699092301117" duration="305000" />
       <workItem from="1699092625040" duration="13891000" />
       <workItem from="1699111342751" duration="28396000" />
-      <workItem from="1699148896801" duration="7634000" />
+      <workItem from="1699148896801" duration="12450000" />
     </task>
     <task id="LOCAL-00001" summary="After Connect to ElephantSQL">
       <option name="closed" value="true" />
@@ -323,7 +322,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699128084195</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Supplement Add and Get">
+      <option name="closed" value="true" />
+      <created>1699157496460</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699157496460</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +385,8 @@
     <MESSAGE value="UserDAO Tested" />
     <MESSAGE value="Activity DAO and Tested" />
     <MESSAGE value="Diet features add and Get" />
-    <option name="LAST_COMMIT_MESSAGE" value="Diet features add and Get" />
+    <MESSAGE value="Supplement Add and Get" />
+    <option name="LAST_COMMIT_MESSAGE" value="Supplement Add and Get" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/healthtrackerrest$ActivityDAOTest.ic" NAME="ActivityDAOTest Coverage Results" MODIFIED="1699144555833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -391,6 +399,9 @@
     <SUITE FILE_PATH="coverage/healthtrackerrest$UserDAOTest.ic" NAME="UserDAOTest Coverage Results" MODIFIED="1699144694355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ie.setu.repository.*</FILTER>
       <FILTER>ie.setu.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/healthtrackerrest$SupplementDAOTest.ic" NAME="SupplementDAOTest Coverage Results" MODIFIED="1699161982621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ie.setu.repository.*</FILTER>
     </SUITE>
   </component>
 </project>

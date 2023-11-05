@@ -15,6 +15,7 @@ class DietDAO {
             }
             return DietList
         }
+    //Find specific Diet with UserID
     fun findByUserId(userId: Int): List<Diet>{
         return transaction {
             Diets
@@ -58,5 +59,4 @@ class DietDAO {
             Diets.deleteWhere { Diets.userId eq userId }
         }
     }
-
 }

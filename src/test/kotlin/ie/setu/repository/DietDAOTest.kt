@@ -36,12 +36,12 @@ class DietDAOTest {
             transaction {
                 //Arrange - create and populate tables with three users and three activities
                 val userDAO = populateUserTable()
-                val activityDAO = populateDietTable()
+                val dietDAO = populateDietTable()
                 //Act & Assert
-                assertEquals(3, activityDAO.getAll().size)
-                assertEquals(diet1, activityDAO.findByDietId(diet1.id))
-                assertEquals(diet2, activityDAO.findByDietId(diet2.id))
-                assertEquals(diet3, activityDAO.findByDietId(diet3.id))
+                assertEquals(3, dietDAO.getAll().size)
+                assertEquals(diet1, dietDAO.findByDietId(diet1.id))
+                assertEquals(diet2, dietDAO.findByDietId(diet2.id))
+                assertEquals(diet3, dietDAO.findByDietId(diet3.id))
             }
         }
     }

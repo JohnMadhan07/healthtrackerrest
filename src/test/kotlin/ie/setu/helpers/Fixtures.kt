@@ -1,10 +1,13 @@
 package ie.setu.helpers
 
 import ie.setu.domain.Activity
+import ie.setu.domain.Diet
 import ie.setu.domain.User
 import ie.setu.domain.db.Activities
+import ie.setu.domain.db.Diets
 import ie.setu.domain.db.Users
 import ie.setu.domain.repository.ActivityDAO
+import ie.setu.domain.repository.DietDAO
 import ie.setu.domain.repository.UserDAO
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.joda.time.DateTime
@@ -26,6 +29,11 @@ val activities = arrayListOf<Activity>(
     Activity(id = 2, description = "Hopping", duration = 10.5, calories = 80, started = DateTime.now(), userId = 1),
     Activity(id = 3, description = "Walking", duration = 12.0, calories = 120, started = DateTime.now(), userId = 2)
 )
+val diets = arrayListOf<Diet>(
+    Diet(id = 1, food = "Chicken", calories = 230,  userId = 1),
+    Diet(id = 2, food = "Mutton",  calories = 300,  userId = 1),
+    Diet(id = 3, food = "Egg",  calories = 30,  userId = 2)
+)
 
 fun populateUserTable(): UserDAO {
     SchemaUtils.create(Users)
@@ -42,4 +50,13 @@ fun populateActivityTable(): ActivityDAO {
     activityDAO.save(activities.get(1))
     activityDAO.save(activities.get(2))
     return activityDAO
+}
+
+fun populateDietTable(): DietDAO {
+    SchemaUtils.create(Diets)
+    val dietDAO = DietDAO()
+    dietDAO.save(diets.get(0))
+    dietDAO.save(diets.get(1))
+    dietDAO.save(diets.get(2))
+    return dietDAO
 }

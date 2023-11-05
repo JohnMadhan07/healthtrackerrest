@@ -15,6 +15,7 @@ class DietDAO {
             }
             return DietList
         }
+    //Find specific Diet with UserID
     fun findByUserId(userId: Int): List<Diet>{
         return transaction {
             Diets

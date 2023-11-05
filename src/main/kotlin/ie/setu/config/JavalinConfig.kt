@@ -43,6 +43,10 @@ class JavalinConfig {
                         get(HealthTrackerController::getDietsByUserId)
                         delete(HealthTrackerController::deleteDietByUserId)
                     }
+                    //The overall path is: "/api/users/:user-id/supplements"
+                    path("supplements"){
+                        get(HealthTrackerController::getSupplementsByUserId)
+                    }
                 }
                 path("/email/{email}"){
                     get(HealthTrackerController::getUserByEmail)
@@ -64,6 +68,14 @@ class JavalinConfig {
                     get(HealthTrackerController::getDietsByDietId)
                     delete(HealthTrackerController::deleteDietByDietId)
                     patch(HealthTrackerController::updateDiet)
+                }
+            }
+            path("/api/supplements"){
+                get(HealthTrackerController::getAllSupplement)
+                post(HealthTrackerController::addSupplement)
+                path("{supplement-id}") {
+                    get(HealthTrackerController::findSupplementsBySupplementId)
+
                 }
             }
         }

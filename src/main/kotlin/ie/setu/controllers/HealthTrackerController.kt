@@ -6,9 +6,11 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import ie.setu.domain.Activity
 import ie.setu.domain.Diet
+import ie.setu.domain.Supplement
 import ie.setu.domain.User
 import ie.setu.domain.repository.ActivityDAO
 import ie.setu.domain.repository.DietDAO
+import ie.setu.domain.repository.SupplementDAO
 import ie.setu.domain.repository.UserDAO
 import io.javalin.http.Context
 
@@ -17,6 +19,8 @@ object HealthTrackerController {
     private val userDao = UserDAO()
     private val activityDAO = ActivityDAO()
     private val dietDAO = DietDAO()
+    private val supplementDAO = SupplementDAO()
+
 
     fun getAllUsers(ctx: Context) {
         ctx.json(userDao.getAll())
@@ -158,4 +162,30 @@ object HealthTrackerController {
         dietDAO.deleteByUserId(ctx.pathParam("user-id").toInt())
     }
 
+//--------------------------------------------------------------
+// SupplementDAOI specifics
+//-------------------------------------------------------------
+    fun getAllSupplement(ctx: Context) {
+        ctx.json(supplementDAO.getAll())
+    }
+    fun getSupplementsByUserId(ctx: Context) {
+        if (userDao.findById(ctx.pathParam("user-id").toInt()) != null) {
+            val supplements = supplementDAO.findByUserId(ctx.pathParam("user-id").toInt())
+            if (supplements.isNotEmpty()) {
+                ctx.json(supplements)
+            }
+        }
+    }
+    fun findSupplementsBySupplementId(ctx: Context) {
+        val supplement = supplementDAO.findBySupplementId((ctx.pathParam("supplement-id").toInt()))
+        if (supplement != null){
+            ctx.json((supplement))
+        }
+    }
+    fun addSupplement(ctx: Context) {
+        val mapper = jacksonObjectMapper()
+        val supplement = mapper.readValue<Supplement>(ctx.body())
+        supplementDAO.save(supplement)
+        ctx.json(supplement)
+    }
 }

@@ -1,7 +1,8 @@
 package ie.setu.config
 
 import ie.setu.controllers.ActivitiesController
-import ie.setu.controllers.HealthTrackerController
+import ie.setu.controllers.DietsController
+import ie.setu.controllers.SupplementsController
 import ie.setu.controllers.UserController
 import io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder.*
@@ -55,13 +56,13 @@ class JavalinConfig {
                     }
                     //The overall path is: "/api/users/:user-id/diets"
                     path("diets"){
-                        get(HealthTrackerController::getDietsByUserId)
-                        delete(HealthTrackerController::deleteDietByUserId)
+                        get(DietsController::getDietsByUserId)
+                        delete(DietsController::deleteDietByUserId)
                     }
                     //The overall path is: "/api/users/:user-id/supplements"
                     path("supplements"){
-                        get(HealthTrackerController::getSupplementsByUserId)
-                        delete(HealthTrackerController::deleteSupplementByUserId)
+                        get(SupplementsController::getSupplementsByUserId)
+                        delete(SupplementsController::deleteSupplementByUserId)
                     }
                 }
                 path("/email/{email}"){
@@ -78,21 +79,21 @@ class JavalinConfig {
                 }
             }
             path("/api/diets"){
-                get(HealthTrackerController::getAllDiet)
-                post(HealthTrackerController::addDiet)
+                get(DietsController::getAllDiet)
+                post(DietsController::addDiet)
                 path("{diet-id}"){
-                    get(HealthTrackerController::getDietsByDietId)
-                    delete(HealthTrackerController::deleteDietByDietId)
-                    patch(HealthTrackerController::updateDiet)
+                    get(DietsController::getDietsByDietId)
+                    delete(DietsController::deleteDietByDietId)
+                    patch(DietsController::updateDiet)
                 }
             }
             path("/api/supplements"){
-                get(HealthTrackerController::getAllSupplement)
-                post(HealthTrackerController::addSupplement)
+                get(SupplementsController::getAllSupplement)
+                post(SupplementsController::addSupplement)
                 path("{supplement-id}") {
-                    get(HealthTrackerController::findSupplementsBySupplementId)
-                    delete(HealthTrackerController::deleteSupplementBySupplementId)
-                    patch(HealthTrackerController::updateSupplement)
+                    get(SupplementsController::findSupplementsBySupplementId)
+                    delete(SupplementsController::deleteSupplementBySupplementId)
+                    patch(SupplementsController::updateSupplement)
                 }
             }
         }

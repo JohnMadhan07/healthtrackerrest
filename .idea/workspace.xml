@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Split controller:Extract Activity Functionality">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/DietsController.kt" afterDir="false" />
+    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Split controller:Extract Supplement and Diets Functionality">
       <change afterPath="$PROJECT_DIR$/src/main/resources/vue/layout.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/components/app-layout.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" afterDir="false" />
@@ -13,8 +12,6 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-overview.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/SupplementsController.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Split-controller" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,9 +94,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Split-controller",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Kotlin Projects/HealthtrackerRest/healthtrackerrest/src/test/kotlin/ie/setu/helpers",
+    "last_opened_file_path": "C:/Users/madha/Downloads/hackathon-starter-master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -228,11 +225,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DietDAOTest" />
-        <item itemvalue="JUnit.SupplementDAOTest" />
-        <item itemvalue="JUnit.SupplementDAOTest$DeleteSupplements" />
         <item itemvalue="JUnit.SupplementDAOTest$UpdateSupplements.updating existing supplement in table results in successful update" />
         <item itemvalue="JUnit.SupplementDAOTest$UpdateSupplements.updating existing diet in table results in successful update" />
+        <item itemvalue="JUnit.SupplementDAOTest$DeleteSupplements" />
+        <item itemvalue="JUnit.SupplementDAOTest" />
+        <item itemvalue="JUnit.DietDAOTest" />
       </list>
     </recent_temporary>
   </component>
@@ -407,7 +404,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Split-controller" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>

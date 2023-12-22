@@ -40,6 +40,7 @@ class JavalinConfig {
 // the layout and display our <home-page> component.
             get("/", VueComponent("<home-page></home-page>"))
             get("/users", VueComponent("<user-overview></user-overview>"))
+            get("/activities", VueComponent("<activity-overview></activity-overview>"))
             get("/users/{user-id}", VueComponent("<user-profile></user-profile>"))
             get("/users/{user-id}/activities", VueComponent("<user-activity-overview></user-activity-overview>"))
             path("/api/users") {

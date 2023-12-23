@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Add a Card for User Profile view" />
+    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Add footer Card for Activities link in User Profile view" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -262,7 +262,7 @@
       <workItem from="1702977177107" duration="7499000" />
       <workItem from="1703068779200" duration="6364000" />
       <workItem from="1703151006694" duration="3606000" />
-      <workItem from="1703366638794" duration="1048000" />
+      <workItem from="1703366638794" duration="1371000" />
     </task>
     <task id="LOCAL-00001" summary="After Connect to ElephantSQL">
       <option name="closed" value="true" />
@@ -400,7 +400,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703367689389</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add footer Card for Activities link in User Profile view">
+      <option name="closed" value="true" />
+      <created>1703367907508</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1703367907508</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +474,8 @@
     <MESSAGE value="Create Home Page UI" />
     <MESSAGE value=" Create Home page Summary" />
     <MESSAGE value="Add a Card for User Profile view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a Card for User Profile view" />
+    <MESSAGE value="Add footer Card for Activities link in User Profile view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add footer Card for Activities link in User Profile view" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/healthtrackerrest$ActivityDAOTest.ic" NAME="ActivityDAOTest Coverage Results" MODIFIED="1699144555833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

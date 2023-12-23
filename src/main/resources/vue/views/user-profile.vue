@@ -12,8 +12,10 @@
           <input class="form-control" v-model="user.name" name="username" type="text"/><br>
           <label class="col-form-label">Email: </label>
           <input class="form-control" v-model="user.email" name="email" type="email"/><br>
-          <div v-if="user">
-            <a :href="`/users/${user.id}/activities`">View User Activities</a>
+          <div class="card-footer text-center">
+            <div v-if="user">
+              <a :href="`/users/${user.id}/activities`">View User Activities</a>
+            </div>
           </div>
         </form>
       </div>

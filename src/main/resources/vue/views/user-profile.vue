@@ -4,7 +4,7 @@
       <p> We're sorry, we were not able to retrieve this user.</p>
       <p> View <a :href="'/users'">all users</a>.</p>
     </div>
-    <div class="card bg-light mb-3" v-if="user && !noUserFound">
+    <div class="card bg-light mb-3" v-if="!noUserFound">
       <div class="card-header">
         <div class="row">
           <div class="col-6"> User Profile </div>
@@ -12,6 +12,11 @@
             <button rel="tooltip" title="Update"
                     class="btn btn-info btn-simple btn-link"
                     @click="updateUser()"> Update User
+            </button>
+            <span style="margin-left: 10px;"></span>
+            <button rel="tooltip" title="Delete"
+                    class="btn btn-info btn-simple btn-link"
+                    @click="deleteUser()"> Delete User
             </button>
           </div>
         </div>
@@ -56,41 +61,45 @@ app.component("user-profile", {
   }),
   created: function () {
     const userId = this.$javalin.pathParams["user-id"];
-    const url = `/api/users/${userId}`;
+    const url = `/api/users/${userId}`
     axios.get(url)
-        .then(res => {
-          if (res.data === '') {
-            // Handle the case where the response data is empty (user not found)
-            console.log("User not found");
-            this.noUserFound = true;
-          } else {
-            // Process the response data when a user is found
-            this.user = res.data;
-            console.log("User found:", this.user);
-          }
-        })
+        .then(res => this.user = res.data)
         .catch(error => {
-          console.log("Error in Axios request:", error);
+          console.log("No user found for id passed in the path parameter: " + error)
+          this.noUserFound = true
         });
   },
-      methods: {
-        updateUser: function () {
-          const userId = this.$javalin.pathParams["user-id"];
-          const url = `/api/users/${userId}`
-          axios.patch(url,
-              {
-                name: this.user.name,
-                email: this.user.email
-              })
-              .then(response =>
-                  this.user.push(response.data))
-              .catch(error => {
-                console.log(error)
-              })
-          alert("User updated!")
-        }
+  methods: {
+    updateUser: function () {
+      const userId = this.$javalin.pathParams["user-id"];
+      const url = `/api/users/${userId}`
+      axios.patch(url,
+          {
+            name: this.user.name,
+            email: this.user.email
+          })
+          .then(response =>
+              this.user.push(response.data))
+          .catch(error => {
+            console.log(error)
+          })
+      alert("User updated!")
+    },
+    deleteUser: function () {
+      if (confirm("Do you really want to delete?")) {
+        const userId = this.$javalin.pathParams["user-id"];
+        const url = `/api/users/${userId}`
+        axios.delete(url)
+            .then(response => {
+              alert("User deleted")
+              //display the /users endpoint
+              window.location.href = '/users';
+            })
+            .catch(function (error) {
+              console.log(error)
+            });
       }
-}
-
-);
+    }
+  }
+});
 </script>

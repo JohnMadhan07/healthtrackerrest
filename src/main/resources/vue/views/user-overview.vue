@@ -11,6 +11,11 @@
             <button rel="tooltip" title="Update" class="btn btn-info btn-simple btn-link">
               <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
+            <span style="margin-left: 10px;"></span>
+            <button rel="tooltip" title="Delete" class="btn btn-info btn-simple btn-link"
+                    @click="deleteUser(user, index)">
+              <i class="fas fa-trash" aria-hidden="true"></i>
+            </button>
           </a>
         </div>
       </div>

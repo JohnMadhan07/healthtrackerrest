@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Add Update button for each user in User Overview">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-overview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-overview.vue" afterDir="false" />
+    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Add Delete functionality to the deete button in User Overview">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +266,7 @@
       <workItem from="1703068779200" duration="6364000" />
       <workItem from="1703151006694" duration="3606000" />
       <workItem from="1703366638794" duration="7627000" />
-      <workItem from="1703424022398" duration="10286000" />
+      <workItem from="1703424022398" duration="14851000" />
     </task>
     <task id="LOCAL-00001" summary="After Connect to ElephantSQL">
       <option name="closed" value="true" />
@@ -467,7 +468,23 @@
       <option name="project" value="LOCAL" />
       <updated>1703449691215</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add Delete button beside Update button in User Overview">
+      <option name="closed" value="true" />
+      <created>1703449991045</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1703449991045</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add Delete functionality to the deete button in User Overview">
+      <option name="closed" value="true" />
+      <created>1703450503208</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1703450503208</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -541,7 +558,9 @@
     <MESSAGE value="Change to Icons in place of Delete and Update button in User Profile View" />
     <MESSAGE value="Change list of users view in User Overview" />
     <MESSAGE value="Add Update button for each user in User Overview" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Update button for each user in User Overview" />
+    <MESSAGE value="Add Delete button beside Update button in User Overview" />
+    <MESSAGE value="Add Delete functionality to the deete button in User Overview" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Delete functionality to the deete button in User Overview" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/healthtrackerrest$ActivityDAOTest.ic" NAME="ActivityDAOTest Coverage Results" MODIFIED="1699144555833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

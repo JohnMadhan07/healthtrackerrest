@@ -65,7 +65,17 @@ app.component("user-profile", {
     const userId = this.$javalin.pathParams["user-id"];
     const url = `/api/users/${userId}`
     axios.get(url)
-        .then(res => this.user = res.data)
+        .then(res => {
+          if (res.data === '') {
+            // Handle the case where the response data is empty (user not found)
+            console.log("User not found");
+            this.noUserFound = true;
+          } else {
+            // Process the response data when a user is found
+            this.user = res.data;
+            console.log("User found:", this.user);
+          }
+        })
         .catch(error => {
           console.log("No user found for id passed in the path parameter: " + error)
           this.noUserFound = true

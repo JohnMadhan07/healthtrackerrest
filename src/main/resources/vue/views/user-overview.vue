@@ -1,5 +1,20 @@
 <template id="user-overview">
   <app-layout>
+    <div class="card bg-light mb-3">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-6">
+            Users
+          </div>
+          <div class="col" align="right">
+            <button rel="tooltip" title="Add"
+                    class="btn btn-info btn-simple btn-link">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="list-group list-group-flush">
       <div class="list-group-item d-flex align-items-start"
            v-for="(user,index) in users" v-bind:key="index">

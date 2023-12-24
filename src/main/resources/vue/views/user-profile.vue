@@ -6,7 +6,15 @@
     </div>
     <div class="card bg-light mb-3" v-if="user && !noUserFound">
       <div class="card-header">
-        User Profile
+        <div class="row">
+          <div class="col-6"> User Profile </div>
+          <div class="col" align="right">
+            <button rel="tooltip" title="Update"
+                    class="btn btn-info btn-simple btn-link"
+                    @click="updateUser()"> Update User
+            </button>
+          </div>
+        </div>
       </div>
       <div class="card-body">
         <form>
@@ -64,6 +72,25 @@ app.component("user-profile", {
         .catch(error => {
           console.log("Error in Axios request:", error);
         });
-  }
-});
+  },
+      methods: {
+        updateUser: function () {
+          const userId = this.$javalin.pathParams["user-id"];
+          const url = `/api/users/${userId}`
+          axios.patch(url,
+              {
+                name: this.user.name,
+                email: this.user.email
+              })
+              .then(response =>
+                  this.user.push(response.data))
+              .catch(error => {
+                console.log(error)
+              })
+          alert("User updated!")
+        }
+      }
+}
+
+);
 </script>

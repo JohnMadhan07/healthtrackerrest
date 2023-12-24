@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Add update button to user profile card header">
+    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Add Delete button to user profile card header">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +266,7 @@
       <workItem from="1703068779200" duration="6364000" />
       <workItem from="1703151006694" duration="3606000" />
       <workItem from="1703366638794" duration="7627000" />
-      <workItem from="1703424022398" duration="7025000" />
+      <workItem from="1703424022398" duration="8688000" />
     </task>
     <task id="LOCAL-00001" summary="After Connect to ElephantSQL">
       <option name="closed" value="true" />
@@ -436,7 +436,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703443282413</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add Delete button to user profile card header">
+      <option name="closed" value="true" />
+      <created>1703445994035</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1703445994035</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +514,8 @@
     <MESSAGE value="Group form elements in User Profile View" />
     <MESSAGE value="Handle empty response for invalid users" />
     <MESSAGE value="Add update button to user profile card header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add update button to user profile card header" />
+    <MESSAGE value="Add Delete button to user profile card header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Delete button to user profile card header" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/healthtrackerrest$ActivityDAOTest.ic" NAME="ActivityDAOTest Coverage Results" MODIFIED="1699144555833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

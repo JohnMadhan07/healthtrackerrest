@@ -11,12 +11,14 @@
           <div class="col" align="right">
             <button rel="tooltip" title="Update"
                     class="btn btn-info btn-simple btn-link"
-                    @click="updateUser()"> Update User
+                    @click="updateUser()">
+              <i class="far fa-save" aria-hidden="true"></i>
             </button>
             <span style="margin-left: 10px;"></span>
             <button rel="tooltip" title="Delete"
                     class="btn btn-info btn-simple btn-link"
-                    @click="deleteUser()"> Delete User
+                    @click="deleteUser()">
+              <i class="fas fa-trash" aria-hidden="true"></i>
             </button>
           </div>
         </div>

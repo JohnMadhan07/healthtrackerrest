@@ -36,6 +36,20 @@ app.component("user-overview", {
       axios.get("/api/users")
           .then(res => this.users = res.data)
           .catch(() => alert("Error while fetching users"));
+    },
+    deleteUser: function (user, index) {
+      if (confirm('Are you sure you want to delete this user? This action cannot be undone.', 'Warning')) {
+        //user confirmed delete
+        const userId = user.id;
+        const url = `/api/users/${userId}`;
+        axios.delete(url)
+            .then(response =>
+                //delete from the local state so Vue will reload list automatically
+                this.users.splice(index, 1).push(response.data))
+            .catch(function (error) {
+              console.log(error)
+            });
+      }
     }
   }
 });

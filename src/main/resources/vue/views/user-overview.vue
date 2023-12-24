@@ -6,6 +6,13 @@
         <div class="mr-auto p-2">
           <span><a :href="`/users/${user.id}`"> {{ user.name }} ({{ user.email }})</a></span>
         </div>
+        <div class="p2">
+          <a :href="`/users/${user.id}`">
+            <button rel="tooltip" title="Update" class="btn btn-info btn-simple btn-link">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   </app-layout>

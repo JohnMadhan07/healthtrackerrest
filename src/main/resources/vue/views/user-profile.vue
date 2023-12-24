@@ -1,6 +1,10 @@
 <template id="user-profile">
   <app-layout>
-    <div class="card bg-light mb-3">
+    <div v-if="noUserFound">
+      <p> We're sorry, we were not able to retrieve this user.</p>
+      <p> View <a :href="'/users'">all users</a>.</p>
+    </div>
+    <div class="card bg-light mb-3" v-if="user && !noUserFound">
       <div class="card-header">
         User Profile
       </div>
@@ -24,28 +28,42 @@
             </div>
             <input type="email" class="form-control" v-model="user.email" name="email" placeholder="Email"/>
           </div>
-          <div class="card-footer text-center">
-            <div v-if="user">
-              <a :href="`/users/${user.id}/activities`">View User Activities</a>
-            </div>
-          </div>
         </form>
+      </div>
+      <div class="card-footer text-center">
+        <div v-if="user">
+          <a :href="`/users/${user.id}/activities`">View User Activities</a>
+        </div>
       </div>
     </div>
   </app-layout>
 </template>
+
 <script>
 app.component("user-profile", {
   template: "#user-profile",
   data: () => ({
-    user: null
+    user: null,
+    noUserFound: false,
   }),
   created: function () {
     const userId = this.$javalin.pathParams["user-id"];
-    const url = `/api/users/${userId}`
+    const url = `/api/users/${userId}`;
     axios.get(url)
-        .then(res => this.user = res.data)
-        .catch(() => alert("Error while fetching user" + userId));
+        .then(res => {
+          if (res.data === '') {
+            // Handle the case where the response data is empty (user not found)
+            console.log("User not found");
+            this.noUserFound = true;
+          } else {
+            // Process the response data when a user is found
+            this.user = res.data;
+            console.log("User found:", this.user);
+          }
+        })
+        .catch(error => {
+          console.log("Error in Axios request:", error);
+        });
   }
 });
 </script>

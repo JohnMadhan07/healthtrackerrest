@@ -15,6 +15,23 @@
         </div>
       </div>
     </div>
+    <div class="card-body">
+      <form id="addUser">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="input-user-name">Name</span>
+          </div>
+          <input type="text" class="form-control" v-model="formData.name" name="name" placeholder="Name"/>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="input-user-email">Email</span>
+          </div>
+          <input type="email" class="form-control" v-model="formData.email" name="email" placeholder="Email"/>
+        </div>
+      </form>
+      <button rel="tooltip" title="Update" class="btn btn-info btn-simple btn-link" @click="addUser()">Add User</button>
+    </div>
     <div class="list-group list-group-flush">
       <div class="list-group-item d-flex align-items-start"
            v-for="(user,index) in users" v-bind:key="index">
@@ -42,6 +59,7 @@ app.component("user-overview", {
   template: "#user-overview",
   data: () => ({
     users: [],
+    formData: [],
   }),
   created() {
     this.fetchUsers();
@@ -65,6 +83,21 @@ app.component("user-overview", {
               console.log(error)
             });
       }
+    },
+    addUser: function (){
+      const url = `/api/users`;
+      axios.post(url,
+          {
+            name: this.formData.name,
+            email: this.formData.email
+          })
+          .then(response => {
+            this.users.push(response.data)
+            this.hideForm= true;
+          })
+          .catch(error => {
+            console.log(error)
+          })
     }
   }
 });

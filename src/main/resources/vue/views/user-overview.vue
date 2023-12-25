@@ -8,14 +8,15 @@
           </div>
           <div class="col" align="right">
             <button rel="tooltip" title="Add"
-                    class="btn btn-info btn-simple btn-link">
+                    class="btn btn-info btn-simple btn-link"
+                    @click="hideForm =!hideForm">
               <i class="fa fa-plus" aria-hidden="true"></i>
             </button>
           </div>
         </div>
       </div>
     </div>
-    <div class="card-body">
+    <div class="card-body":class="{ 'd-none': hideForm}">
       <form id="addUser">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -60,6 +61,7 @@ app.component("user-overview", {
   data: () => ({
     users: [],
     formData: [],
+    hideForm :true,
   }),
   created() {
     this.fetchUsers();

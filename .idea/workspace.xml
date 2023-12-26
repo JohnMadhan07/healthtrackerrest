@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment=" Create Home page Summary">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/activity-overview.vue" afterDir="false" />
+    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Toggle Add Users view">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,9 +91,9 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Home-page-Summary&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Frontend-CRUD&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/madha/Downloads/hackathon-starter-master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/madha/Downloads/Matul Project Reference&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -266,6 +266,10 @@
       <workItem from="1702977177107" duration="7499000" />
       <workItem from="1703068779200" duration="6364000" />
       <workItem from="1703151006694" duration="3606000" />
+      <workItem from="1703366638794" duration="7627000" />
+      <workItem from="1703424022398" duration="17778000" />
+      <workItem from="1703511157332" duration="2280000" />
+      <workItem from="1703585290874" duration="1037000" />
     </task>
     <task id="LOCAL-00001" summary="After Connect to ElephantSQL">
       <option name="closed" value="true" />
@@ -395,7 +399,119 @@
       <option name="project" value="LOCAL" />
       <updated>1703109253705</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add a Card for User Profile view">
+      <option name="closed" value="true" />
+      <created>1703367689389</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1703367689389</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add footer Card for Activities link in User Profile view">
+      <option name="closed" value="true" />
+      <created>1703367907508</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1703367907508</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Group form elements in User Profile View">
+      <option name="closed" value="true" />
+      <created>1703368408178</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1703368408178</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Handle empty response for invalid users">
+      <option name="closed" value="true" />
+      <created>1703441533177</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1703441533177</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add update button to user profile card header">
+      <option name="closed" value="true" />
+      <created>1703443282413</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1703443282413</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Add Delete button to user profile card header">
+      <option name="closed" value="true" />
+      <created>1703445994035</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1703445994035</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Change to Icons in place of Delete and Update button in User Profile View">
+      <option name="closed" value="true" />
+      <created>1703448447594</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1703448447594</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Change list of users view in User Overview">
+      <option name="closed" value="true" />
+      <created>1703448948707</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1703448948707</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Add Update button for each user in User Overview">
+      <option name="closed" value="true" />
+      <created>1703449691215</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1703449691215</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Add Delete button beside Update button in User Overview">
+      <option name="closed" value="true" />
+      <created>1703449991045</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1703449991045</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add Delete functionality to the deete button in User Overview">
+      <option name="closed" value="true" />
+      <created>1703450503208</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1703450503208</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Create &quot;Adding Users&quot; button in User Overview">
+      <option name="closed" value="true" />
+      <created>1703458035104</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1703458035104</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Adding functionality to the &quot;Add Users&quot; button in User Overview">
+      <option name="closed" value="true" />
+      <created>1703513831179</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1703513831179</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Toggle Add Users view">
+      <option name="closed" value="true" />
+      <created>1703514183675</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1703514183675</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,9 +562,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="After Connect to ElephantSQL" />
-    <MESSAGE value="Setting up Railway Hosting" />
-    <MESSAGE value="find User By Id" />
     <MESSAGE value="Version 2" />
     <MESSAGE value="UserDAOTested" />
     <MESSAGE value="Deployed in Railway" />
@@ -460,7 +573,21 @@
     <MESSAGE value="Split controller:Extract Activity Functionality" />
     <MESSAGE value="Create Home Page UI" />
     <MESSAGE value=" Create Home page Summary" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Create Home page Summary" />
+    <MESSAGE value="Add a Card for User Profile view" />
+    <MESSAGE value="Add footer Card for Activities link in User Profile view" />
+    <MESSAGE value="Group form elements in User Profile View" />
+    <MESSAGE value="Handle empty response for invalid users" />
+    <MESSAGE value="Add update button to user profile card header" />
+    <MESSAGE value="Add Delete button to user profile card header" />
+    <MESSAGE value="Change to Icons in place of Delete and Update button in User Profile View" />
+    <MESSAGE value="Change list of users view in User Overview" />
+    <MESSAGE value="Add Update button for each user in User Overview" />
+    <MESSAGE value="Add Delete button beside Update button in User Overview" />
+    <MESSAGE value="Add Delete functionality to the deete button in User Overview" />
+    <MESSAGE value="Create &quot;Adding Users&quot; button in User Overview" />
+    <MESSAGE value="Adding functionality to the &quot;Add Users&quot; button in User Overview" />
+    <MESSAGE value="Toggle Add Users view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Toggle Add Users view" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/healthtrackerrest$ActivityDAOTest.ic" NAME="ActivityDAOTest Coverage Results" MODIFIED="1699144555833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

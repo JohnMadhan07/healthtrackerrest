@@ -43,7 +43,7 @@ jobs:
 
       - name: Debug Environment Variables
         run: |
-          echo "RAILWAY_TOKEN=$RAILWAY_TOKEN"
+          echo "RAILWAY_TOKEN=${{ secrets.RAILWAY_TOKEN }}"
           env
 
       - uses: devtomio/action-railway@v1.1.4

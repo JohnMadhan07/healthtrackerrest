@@ -39,12 +39,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-       - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-       - name: Debug Environment Variables
-         run: echo "RAILWAY_TOKEN=$RAILWAY_TOKEN"
+      - name: Debug Environment Variables
+        run: |
+          echo "RAILWAY_TOKEN=$RAILWAY_TOKEN"
+          env
 
-       - uses: devtomio/action-railway@v1.1.4
-         name: Deploy to Railway
-         env:
-           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      - uses: devtomio/action-railway@v1.1.4
+        name: Deploy to Railway
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}

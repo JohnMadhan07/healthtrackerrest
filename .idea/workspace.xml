@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Adding functionality to the &quot;Add Users&quot; button in User Overview" />
+    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Toggle Add Users view">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -264,7 +268,8 @@
       <workItem from="1703151006694" duration="3606000" />
       <workItem from="1703366638794" duration="7627000" />
       <workItem from="1703424022398" duration="17778000" />
-      <workItem from="1703511157332" duration="1334000" />
+      <workItem from="1703511157332" duration="2280000" />
+      <workItem from="1703585290874" duration="1037000" />
     </task>
     <task id="LOCAL-00001" summary="After Connect to ElephantSQL">
       <option name="closed" value="true" />
@@ -498,7 +503,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703513831179</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Toggle Add Users view">
+      <option name="closed" value="true" />
+      <created>1703514183675</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1703514183675</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,7 +562,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="find User By Id" />
     <MESSAGE value="Version 2" />
     <MESSAGE value="UserDAOTested" />
     <MESSAGE value="Deployed in Railway" />
@@ -574,7 +586,8 @@
     <MESSAGE value="Add Delete functionality to the deete button in User Overview" />
     <MESSAGE value="Create &quot;Adding Users&quot; button in User Overview" />
     <MESSAGE value="Adding functionality to the &quot;Add Users&quot; button in User Overview" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding functionality to the &quot;Add Users&quot; button in User Overview" />
+    <MESSAGE value="Toggle Add Users view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Toggle Add Users view" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/healthtrackerrest$ActivityDAOTest.ic" NAME="ActivityDAOTest Coverage Results" MODIFIED="1699144555833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

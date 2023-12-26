@@ -45,10 +45,14 @@
           </div>
         </form>
       </div>
-      <div class="card-footer text-center">
-        <div v-if="user">
-          <a :href="`/users/${user.id}/activities`">View User Activities</a>
-        </div>
+      <div class="card-footer text-left">
+        <p  v-if="activities.length === 0"> No activities yet...</p>
+        <p  v-if="activities.length > 0"> Activities so far...</p>
+        <ul>
+          <li v-for="activity in activities">
+            {{ activity.description }} for {{ activity.duration }} minutes
+          </li>
+        </ul>
       </div>
     </div>
   </app-layout>
@@ -60,26 +64,22 @@ app.component("user-profile", {
   data: () => ({
     user: null,
     noUserFound: false,
+    activities: [],
   }),
   created: function () {
     const userId = this.$javalin.pathParams["user-id"];
     const url = `/api/users/${userId}`
     axios.get(url)
-        .then(res => {
-          if (res.data === '') {
-            // Handle the case where the response data is empty (user not found)
-            console.log("User not found");
-            this.noUserFound = true;
-          } else {
-            // Process the response data when a user is found
-            this.user = res.data;
-            console.log("User found:", this.user);
-          }
-        })
+        .then(res => this.user = res.data)
         .catch(error => {
           console.log("No user found for id passed in the path parameter: " + error)
           this.noUserFound = true
-        });
+        })
+    axios.get(url + `/activities`)
+        .then(res => this.activities = res.data)
+        .catch(error => {
+          console.log("No activities added yet (this is ok): " + error)
+        })
   },
   methods: {
     updateUser: function () {

@@ -73,14 +73,15 @@ app.component("user-overview", {
           .catch(() => alert("Error while fetching users"));
     },
     deleteUser: function (user, index) {
-      if (confirm('Are you sure you want to delete this user? This action cannot be undone.', 'Warning')) {
+      if (confirm('Are you sure you want to delete this user? This action cannot be undone.')) {
         //user confirmed delete
         const userId = user.id;
         const url = `/api/users/${userId}`;
         axios.delete(url)
-            .then(response =>
+            .then(response =>{
                 //delete from the local state so Vue will reload list automatically
-                this.users.splice(index, 1).push(response.data))
+                this.users.splice(index, 1).push(response.data)
+            })
             .catch(function (error) {
               console.log(error)
             });
@@ -96,6 +97,7 @@ app.component("user-overview", {
           .then(response => {
             this.users.push(response.data)
             this.hideForm= true;
+            window.location.href = '/users';
           })
           .catch(error => {
             console.log(error)

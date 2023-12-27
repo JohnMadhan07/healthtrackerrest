@@ -42,7 +42,8 @@ jobs:
         run: npm i -g @railway/cli
 
       - name: Deploy to Railway
-        run: railway up --service "${{ secrets.RAILWAY_SERVICE }}"
+        run: railway up --service "healthtrackerrest"
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
 

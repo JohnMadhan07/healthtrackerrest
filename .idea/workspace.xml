@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Create Activity Overview">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/activity-profile.vue" afterDir="false" />
+    <list default="true" id="378f9487-3aab-4503-8f70-52588d165a44" name="Changes" comment="Display Activity details in Activity Profile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/activity-overview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/activity-overview.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -272,7 +270,7 @@
       <workItem from="1703511157332" duration="2280000" />
       <workItem from="1703585290874" duration="1037000" />
       <workItem from="1703674147157" duration="7598000" />
-      <workItem from="1703755800374" duration="7136000" />
+      <workItem from="1703755800374" duration="13280000" />
     </task>
     <task id="LOCAL-00001" summary="After Connect to ElephantSQL">
       <option name="closed" value="true" />
@@ -522,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703756881518</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Display Activity details in Activity Profile">
+      <option name="closed" value="true" />
+      <created>1703763126985</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1703763126986</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +579,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="UserDAOTested" />
     <MESSAGE value="Deployed in Railway" />
     <MESSAGE value="UserDAO Tested" />
     <MESSAGE value="Activity DAO and Tested" />
@@ -598,7 +603,8 @@
     <MESSAGE value="Adding functionality to the &quot;Add Users&quot; button in User Overview" />
     <MESSAGE value="Toggle Add Users view" />
     <MESSAGE value="Create Activity Overview" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Activity Overview" />
+    <MESSAGE value="Display Activity details in Activity Profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Display Activity details in Activity Profile" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/healthtrackerrest$ActivityDAOTest.ic" NAME="ActivityDAOTest Coverage Results" MODIFIED="1699144555833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

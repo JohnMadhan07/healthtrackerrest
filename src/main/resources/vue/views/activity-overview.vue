@@ -1,9 +1,18 @@
 <template id="activity-overview">
   <div>
+    <div class="card bg-light mb-3">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-6">
+            Activities
+          </div>
+        </div>
+      </div>
+    </div>
     <div>
       <ul class="activity-overview-list">
         <li v-for="activity in activities">
-          {{activity.description}}
+          {{ activity.description }}
         </li>
       </ul>
     </div>

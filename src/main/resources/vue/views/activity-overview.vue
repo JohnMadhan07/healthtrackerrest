@@ -33,12 +33,12 @@
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="input-activity-duration">Duration</span>
+            <span class="input-group-text" id="input-activity-duration">Duration(in mins)</span>
           </div>
-          <input type="text" class="form-control" v-model="formData.duration" name="duration" placeholder="Duration in mins"/>
+          <input type="text" class="form-control" v-model="formData.duration" name="duration" placeholder="Duration"/>
         </div>
       </form>
-      <button rel="tooltip" title="Update" class="btn btn-info btn-simple btn-link" @click="addActivity()">
+      <button rel="tooltip" title="Add" class="btn btn-info btn-simple btn-link" @click="addActivity()">
         Add Activity
       </button>
     </div>
@@ -73,13 +73,17 @@ app.component("activity-overview", {
       const url = `/api/activities`;
       axios.post(url,
           {
+            userId:this.formData.userId,
             description: this.formData.description,
             duration: this.formData.duration
           })
           .then(response => {
+            console.log(this.formData)
             this.activities.push(response.data)
             this.hideForm= true;
-            window.location.href = '/activities';
+            setTimeout(() => {
+              window.location.href = '/activities';
+            }, 5000);
           })
           .catch(error => {
             console.log(error)

@@ -26,16 +26,21 @@
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text" id="input-activity-duration">Duration</span>
+              <span class="input-group-text" id="input-activity-duration">Duration(in mins)</span>
             </div>
             <input type="text" class="form-control" v-model="activity.duration" name="duration" placeholder="Duration"/>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="input-calories">Calories</span>
+            </div>
+            <input type="text" class="form-control" v-model="activity.calories" name="calories" placeholder="calories"/>
           </div>
         </form>
       </div>
     </div>
   </app-layout>
 </template>
-
 <script>
 app.component("activity-profile", {
   template: "#activity-profile",

@@ -1,5 +1,5 @@
 <template id="activity-overview">
-  <div>
+  <app-layout>
     <div class="card bg-light mb-3">
       <div class="card-header">
         <div class="row">
@@ -9,14 +9,15 @@
         </div>
       </div>
     </div>
-    <div>
-      <ul class="activity-overview-list">
-        <li v-for="activity in activities">
-          {{ activity.description }}
-        </li>
-      </ul>
+    <div class="list-group list-group-flush">
+      <div class="list-group-item d-flex align-items-start"
+           v-for="(activity,index) in activities" v-bind:key="index">
+        <div class="mr-auto p-2">
+          <span><a :href="`/activities/${activity.id}`"> {{ activity.description }}</a></span>
+        </div>
+      </div>
     </div>
-  </div>
+  </app-layout>
 </template>
 <script>
 app.component("activity-overview", {
